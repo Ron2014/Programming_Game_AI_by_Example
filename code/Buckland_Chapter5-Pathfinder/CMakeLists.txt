@@ -1,4 +1,4 @@
-fips_begin_module(Pathfinder)
+fips_begin_app(Pathfinder windowed)
     fips_dir(../Common GROUP "common")
     fips_files(
         misc/utils.h
@@ -33,4 +33,4 @@ fips_begin_module(Pathfinder)
         toolbar.rc
         toolbar1.bmp
     )
-fips_end_module()
+fips_end_app()

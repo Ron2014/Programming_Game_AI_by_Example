@@ -1,0 +1,6 @@
+fips_begin_app(Raven)
+fips_dir(. GROUP "AI")
+fips_dir(. GROUP "Common")
+fips_dir(. GROUP "Game")
+fips_dir(. GROUP "Resource Files")
+fips_end_app()

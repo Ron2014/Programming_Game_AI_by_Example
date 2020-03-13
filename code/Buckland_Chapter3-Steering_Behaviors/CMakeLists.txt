@@ -1,4 +1,4 @@
-fips_begin_module(Steering)
+fips_begin_app(Steering windowed)
     fips_files_ex(. *.cpp GROUP "Source Files")
     fips_files_ex(. *.h EXCEPT resource.h GROUP "Header Files")
 
@@ -10,4 +10,4 @@ fips_begin_module(Steering)
     )
 
     fips_deps(Misc)
-fips_end_module()
+fips_end_app()

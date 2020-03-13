@@ -1,4 +1,4 @@
-fips_begin_module(SimpleSoccer)
+fips_begin_app(SimpleSoccer windowed)
     fips_dir(../Common GROUP "common")
     fips_files(
         misc/autolist.h
@@ -89,4 +89,4 @@ fips_begin_module(SimpleSoccer)
         Script1.rc
     )
 
-fips_end_module()
+fips_end_app()
