@@ -1,3 +1,4 @@
+fips_add_subdirectory(lua-5.1.3)
 # fips_add_subdirectory(luabind)
 
 fips_begin_module(Misc)
@@ -13,5 +14,4 @@ fips_begin_module(Misc)
     fips_src(script)
     fips_src(Time)
     fips_src(Triggers)
-    # fips_deps(luabind)
 fips_end_module()

@@ -1,5 +1,6 @@
 fips_begin_app(Raven windowed)
 
+fips_include_directories(../Common/lua-5.1.3/include)
 fips_files_ex(../Common/fuzzy Fuzzy*.* EXCEPT FuzzySet*.* GROUP "AI/fuzzy logic")
 fips_files_ex(../Common/fuzzy FuzzySet*.* GROUP "AI/fuzzy logic/fuzzy set types")
 
@@ -84,6 +85,7 @@ fips_dir(. GROUP "Game")
 fips_files(
     main.cpp
     Raven_Bot.h Raven_Bot.cpp
+    Raven_SteeringBehaviors.h Raven_SteeringBehaviors.cpp
     Raven_Game.h Raven_Game.cpp
     Raven_Map.h Raven_Map.cpp
 )
@@ -109,7 +111,7 @@ fips_files(Params.lua)
 fips_dir(./lua GROUP "Game/Script related/general")
 fips_files(Raven_Scriptor.h Raven_Scriptor.cpp)
 fips_files_ex(../Common/script Scriptor.h GROUP "Game/Script related/general")
-fips_src(../Common/lua-5.1.3/include GROUP "Game/Script related/lua headers")
+fips_src(../Common/lua-5.1.3/include *.h GROUP "Game/Script related/lua headers")
 
 fips_dir(. GROUP "Game/weapons & projectiles")
 fips_files_ex(./armory Projectile_*.* Raven_Projectile.* GROUP "Game/weapons & projectiles/projectiles")
@@ -128,10 +130,6 @@ fips_files(
     Raven_DM1_With_Doors.map
 )
 
-if(FIPS_WINDOWS)
-    include_directories(../Common/lua-5.1.3/include)
-    link_directories(../Common/lua-5.1.3)
-    fips_libs(lua5.1.lib)
-endif()
+fips_deps(lua5.1)
 
 fips_end_app()
