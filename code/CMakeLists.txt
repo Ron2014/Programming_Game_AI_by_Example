@@ -23,8 +23,14 @@ fips_add_subdirectory(Buckland_Chapter3-Steering_Behaviors)
 
 fips_ide_group(Buckland_Chapter4-SimpleSoccer)
 fips_add_subdirectory(Buckland_Chapter4-SimpleSoccer)
+
+fips_ide_group(Buckland_Chapter5-Pathfinder)
 fips_add_subdirectory(Buckland_Chapter5-Pathfinder)
+
+fips_ide_group(Buckland_Chapter6_Scripting_Source)
 fips_add_subdirectory(Buckland_Chapter6_Scripting_Source)
+
+fips_ide_group(Buckland_Chapter7_to_10_Raven)
 fips_add_subdirectory(Buckland_Chapter7_to_10_Raven)
 
 fips_finish()
