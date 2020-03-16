@@ -6,7 +6,7 @@
 //Name:  ParamLoader.h
 //
 //Desc:  singleton class to handle the loading of default parameter
-//       values from an initialization file: 'params.ini'
+//       values from an initialization file: 'SimpleSoccer-params.ini'
 //
 //Author: Mat Buckland 2003 (fup@ai-junkie.com)
 //
@@ -26,7 +26,7 @@ class ParamLoader : public iniFileLoaderBase
 {
 private:
 
-  ParamLoader():iniFileLoaderBase("Params.ini")
+  ParamLoader():iniFileLoaderBase("SimpleSoccer-params.ini")
   {    
        
     GoalWidth                   = GetNextParameterDouble(); 

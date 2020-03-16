@@ -6,7 +6,7 @@ using std::string;
 void RemoveCommentingFromLine(string& line)
 {
    //search for any comment and remove
-   string::size_type idx = line.find('//');
+   string::size_type idx = line.find('/');
 
    if (idx != string::npos)
    {

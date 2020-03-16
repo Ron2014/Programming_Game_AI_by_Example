@@ -21,7 +21,7 @@ class ParamLoader : public iniFileLoaderBase
 {
 private:
   
-    ParamLoader():iniFileLoaderBase("params.ini")
+    ParamLoader():iniFileLoaderBase("Steering-params.ini")
   {
     NumAgents               = GetNextParameterInt();
     NumObstacles            = GetNextParameterInt();

@@ -1,3 +1,5 @@
+
+
 fips_begin_app(SimpleSoccer windowed)
     fips_dir(../Common GROUP "common")
     fips_files(
@@ -84,9 +86,10 @@ fips_begin_app(SimpleSoccer windowed)
     fips_dir(. GROUP "Resource Files")
     fips_files(
         icon1.ico
-        Params.ini
+        SimpleSoccer-params.ini
         resource.h
         Script1.rc
     )
 
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/SimpleSoccer-params.ini DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
