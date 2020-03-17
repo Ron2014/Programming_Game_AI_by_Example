@@ -1,5 +1,4 @@
 fips_add_subdirectory(lua-5.1.3)
-# fips_add_subdirectory(luabind)
 
 fips_begin_module(Misc)
     fips_src(2D)
@@ -15,3 +14,9 @@ fips_begin_module(Misc)
     fips_src(Time)
     fips_src(Triggers)
 fips_end_module()
+
+# if(DEFINED ENV{BOOST_1_72_INCLUDE_PATH})
+#     fips_add_subdirectory(luabind)
+# else()
+#     message(WARNING "undefine ENV{BOOST_INCLUDE_PATH} for luabind. luabind built fail. Be aware")
+# endif()
