@@ -1,0 +1,8 @@
+[submodule "fips"]
+	path = fips
+	url = https://github.com/Ron2014/fips.git
+	branch = master
+[submodule "boost_1_48_0"]
+	path = boost_1_48_0
+	url = https://github.com/Ron2014/boost_1_48_0.git
+	branch = master
