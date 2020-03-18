@@ -4,6 +4,7 @@
 *.pyc
 .vscode/
 .idea/
+.svn/
 #<fips
-fips-*
-fips/
+fips-build/
+fips-deploy/
