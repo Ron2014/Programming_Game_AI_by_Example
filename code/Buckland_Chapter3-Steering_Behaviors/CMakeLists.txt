@@ -30,5 +30,6 @@ fips_begin_app(Steering windowed)
         Script1.rc
     )
     
+    ## this .ini is the config file for runtime program
     file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/Steering-params.ini DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
