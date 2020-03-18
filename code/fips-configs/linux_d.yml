@@ -1,9 +1,0 @@
----
-platform: linux 
-generator: Unix Makefiles
-build_tool: make
-build_type: Debug
-# ADD new yml to ADD unittest!!!
-defines:
-    FIPS_UNITTESTS: ON
-    FIPS_EXCEPTIONS: ON
