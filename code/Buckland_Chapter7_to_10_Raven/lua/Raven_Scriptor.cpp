@@ -11,5 +11,5 @@ Raven_Scriptor* Raven_Scriptor::Instance()
 
 Raven_Scriptor::Raven_Scriptor():Scriptor()
 {
-  RunScriptFile("Params.lua");
+  RunScriptFile("Raven-params.lua");
 }

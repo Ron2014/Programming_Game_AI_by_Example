@@ -107,7 +107,7 @@ fips_files(
 )
 
 fips_dir(. GROUP "Game/Script related")
-fips_files(Params.lua)
+fips_files(Raven-params.lua)
 fips_dir(./lua GROUP "Game/Script related/general")
 fips_files(Raven_Scriptor.h Raven_Scriptor.cpp)
 fips_files_ex(../Common/script Scriptor.h GROUP "Game/Script related/general")
@@ -132,4 +132,8 @@ fips_files(
 
 fips_deps(lua5.1)
 
+
+## this .ini is the config file for runtime program
+file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/Raven-params.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
+file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/maps DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()

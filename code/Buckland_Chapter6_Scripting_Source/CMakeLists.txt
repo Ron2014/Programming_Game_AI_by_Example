@@ -3,6 +3,9 @@ fips_begin_app(cpp_using_lua cmdline)
 
     fips_include_directories(../Common/lua-5.1.3/include)
     fips_deps(lua5.1)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/cpp_using_lua/cpp_using_lua.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(lua_using_cpp cmdline)
@@ -11,22 +14,31 @@ fips_begin_app(lua_using_cpp cmdline)
     fips_files_ex(lua_using_cpp *.lua GROUP "lua scripts")
     
     fips_deps(lua5.1)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/lua_using_cpp/Rock_Paper_Scissors_Using_C++_Funcs.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(CreatingClassesUsingLuaBind cmdline)
-    fips_files_ex(lua_using_cpp *.cpp GROUP "Source Files")
-    fips_files_ex(lua_using_cpp *.h GROUP "Header Files")
-    fips_files_ex(lua_using_cpp *.lua GROUP "lua scripts")
+    fips_files_ex(CreatingClassesUsingLuaBind *.cpp GROUP "Source Files")
+    fips_files_ex(CreatingClassesUsingLuaBind *.h GROUP "Header Files")
+    fips_files_ex(CreatingClassesUsingLuaBind *.lua GROUP "lua scripts")
     
-    fips_deps(lua5.1)
+    fips_deps(luabind)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/CreatingClassesUsingLuaBind/classes_in_lua.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(ExposingCPPClassesUsingLuaBind cmdline)
-    fips_files_ex(lua_using_cpp *.cpp GROUP "Source Files")
-    fips_files_ex(lua_using_cpp *.h GROUP "Header Files")
-    fips_files_ex(lua_using_cpp *.lua GROUP "lua scripts")
+    fips_files_ex(ExposingCPPClassesUsingLuaBind *.cpp GROUP "Source Files")
+    fips_files_ex(ExposingCPPClassesUsingLuaBind *.h GROUP "Header Files")
+    fips_files_ex(ExposingCPPClassesUsingLuaBind *.lua GROUP "lua scripts")
     
-    fips_deps(lua5.1)
+    fips_deps(luabind)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/ExposingCPPClassesUsingLuaBind/ExposingCPPClassesToLua.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(ExposingCPPFunctionsToLua cmdline)
@@ -35,6 +47,9 @@ fips_begin_app(ExposingCPPFunctionsToLua cmdline)
     include_directories($ENV{BOOST_1_48_INCLUDE_PATH})
     fips_include_directories(../Common/luabind)
     fips_deps(luabind)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/ExposingCPPFunctionsToLua/ExposingCPPFunctionsToLua.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(ScriptedStateMachine cmdline)
@@ -45,6 +60,9 @@ fips_begin_app(ScriptedStateMachine cmdline)
     include_directories($ENV{BOOST_1_48_INCLUDE_PATH})
     fips_include_directories(../Common/luabind)
     fips_deps(luabind)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/ScriptedStateMachine/StateMachineScript.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
 
 fips_begin_app(StartHere cmdline)
@@ -53,4 +71,7 @@ fips_begin_app(StartHere cmdline)
     
     fips_include_directories(../Common/luabind)
     fips_deps(luabind)
+
+    ## this .ini is the config file for runtime program
+    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/StartHere/your_first_lua_script.lua DESTINATION ${FIPS_PROJECT_DEPLOY_DIR} )
 fips_end_app()
