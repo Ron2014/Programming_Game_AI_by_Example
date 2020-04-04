@@ -1,6 +1,6 @@
 fips_begin_module(luabind)
-include_directories($ENV{BOOST_1_48_INCLUDE_PATH})
-link_directories($ENV{BOOST_1_48_INCLUDE_PATH})
+include_directories($ENV{BOOST_1_48_0_INCLUDE_PATH})
+link_directories($ENV{BOOST_1_48_0_INCLUDE_PATH})
 fips_include_directories(.)
 fips_include_directories(../lua-5.1.3/include)
 fips_vs_disable_warnings(4297)

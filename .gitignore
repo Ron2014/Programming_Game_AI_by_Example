@@ -1,6 +1,7 @@
 #>fips
 # this area is managed by fips, do not edit
 .fips-*
+fips-*
 *.pyc
 .vscode/
 .idea/

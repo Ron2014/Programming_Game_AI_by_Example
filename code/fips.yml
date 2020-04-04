@@ -2,6 +2,11 @@
 # code
 #
 ---
+imports:
+    fips-unittestpp:
+        git: https://github.com/floooh/fips-unittestpp.git
+defines:
+    FIPS_UNITTESTS: ON
 #   imports:
 #       PROJ-NAME:
 #           git: GIT-URL
